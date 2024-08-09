@@ -31,7 +31,7 @@ Future<bool> verifyEmailWithToken(
     return res.session != null;
   } on AuthException catch (e) {
     // catch any authenticatino errors and print them to the console
-    print('Error de autenticación: ${e.message}');
+    print(e.message);
     return false;
   } catch (error) {
     // catch any other errors
